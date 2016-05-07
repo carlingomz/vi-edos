@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C91A0B4-E2A4-47C1-9E23-8CA15805679A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viñedos</RootNamespace>
+    <AssemblyName>viñedos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\publicacion\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>31010D42719B4E5B9BB4E9A08131B90CF1B05524</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>viñedos_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Punto de venta\Punto de venta\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WW, Version=2.0.35.71, Culture=neutral, PublicKeyToken=87d16b8f7b531b65, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CadLib 4.0\WW.dll</HintPath>
+    </Reference>
+    <Reference Include="WW.Cad, Version=2.0.35.71, Culture=neutral, PublicKeyToken=87d16b8f7b531b65, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CadLib 4.0\WW.Cad.dll</HintPath>
+    </Reference>
+    <Reference Include="WW.GL, Version=2.0.35.71, Culture=neutral, PublicKeyToken=87d16b8f7b531b65, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CadLib 4.0\WW.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="WW.License, Version=1.0.0.0, Culture=neutral, PublicKeyToken=87d16b8f7b531b65, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CadLib 4.0\WW.License.dll</HintPath>
+    </Reference>
+    <Reference Include="WW.Pdf, Version=2.0.35.71, Culture=neutral, PublicKeyToken=87d16b8f7b531b65, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CadLib 4.0\WW.Pdf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area administrativa\AreaAdministrativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area administrativa\AreaAdministrativa.Designer.cs">
+      <DependentUpon>AreaAdministrativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Area administrativa\consultas.cs" />
+    <Compile Include="Autocad\EntityEventArgs.cs" />
+    <Compile Include="Autocad\GLUtil.cs" />
+    <Compile Include="Autocad\ViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Autocad\ViewControl.Designer.cs">
+      <DependentUpon>ViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliares\Auxiliares.cs" />
+    <Compile Include="Auxiliares\conexion.cs" />
+    <Compile Include="Auxiliares\consultas.cs" />
+    <Compile Include="logIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logIn.Designer.cs">
+      <DependentUpon>logIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lote\lote.cs" />
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoreo\consultas.cs" />
+    <Compile Include="Monitoreo\monitoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoreo\monitoreo.Designer.cs">
+      <DependentUpon>monitoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planes de financiamiento\planesdefinanciamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planes de financiamiento\planesdefinanciamiento.Designer.cs">
+      <DependentUpon>planesdefinanciamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos especiales\consultas.cs" />
+    <Compile Include="Procesos especiales\ProcesosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos especiales\ProcesosEspeciales.Designer.cs">
+      <DependentUpon>ProcesosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Area administrativa\AreaAdministrativa.resx">
+      <DependentUpon>AreaAdministrativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autocad\ViewControl.resx">
+      <DependentUpon>ViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logIn.resx">
+      <DependentUpon>logIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitoreo\monitoreo.resx">
+      <DependentUpon>monitoreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planes de financiamiento\planesdefinanciamiento.resx">
+      <DependentUpon>planesdefinanciamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos especiales\ProcesosEspeciales.resx">
+      <DependentUpon>ProcesosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="viñedos_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO LOS VIÑEDOS.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
