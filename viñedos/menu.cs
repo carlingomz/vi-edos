@@ -50,7 +50,7 @@ namespace viñedos
             string filename = @"C:\Viñedos\Los Viñedos Lotificación.dwg";
             SendKeys.Send("{ESC}");
             var model = DwgReader.Read(filename);
-            var a = new monitoreo(model);
+            var a = new Monitoreo.Monitoreo(model);
             Hide();
             a.ShowDialog();
         }

@@ -1,6 +1,6 @@
 ﻿namespace viñedos.Monitoreo
 {
-    partial class monitoreo
+    internal partial class Monitoreo
     {
         /// <summary>
         /// Required designer variable.

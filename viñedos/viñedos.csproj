@@ -141,11 +141,11 @@
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitoreo\consultas.cs" />
-    <Compile Include="Monitoreo\monitoreo.cs">
+    <Compile Include="Monitoreo\Monitoreo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Monitoreo\monitoreo.Designer.cs">
-      <DependentUpon>monitoreo.cs</DependentUpon>
+    <Compile Include="Monitoreo\Monitoreo.Designer.cs">
+      <DependentUpon>Monitoreo.cs</DependentUpon>
     </Compile>
     <Compile Include="Planes de financiamiento\planesdefinanciamiento.cs">
       <SubType>Form</SubType>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Monitoreo\monitoreo.resx">
-      <DependentUpon>monitoreo.cs</DependentUpon>
+    <EmbeddedResource Include="Monitoreo\Monitoreo.resx">
+      <DependentUpon>Monitoreo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Planes de financiamiento\planesdefinanciamiento.resx">
       <DependentUpon>planesdefinanciamiento.cs</DependentUpon>

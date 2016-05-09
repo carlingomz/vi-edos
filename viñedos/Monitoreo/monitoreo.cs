@@ -14,16 +14,16 @@ using viñedos.Lote;
 
 namespace viñedos.Monitoreo
 {
-    public partial class monitoreo : Form
+    internal partial class Monitoreo : Form
     {
         private int X { get; set; }
         private int Y { get; set; }
         private lote _lote= new lote();
-        public monitoreo()
+        public Monitoreo()
         {
-            InitializeComponent();
+            InitializeComponent();//-- 
         }
-        public monitoreo(DxfModel model)
+        public Monitoreo(DxfModel model)
         {
             InitializeComponent();
             viewControl.Model = model;
@@ -81,10 +81,10 @@ namespace viñedos.Monitoreo
                         txtLote.Text += @"Sector :" + readerDd["sector"] + "\r\n";
                         txtLote.Text += @"Viña :" + readerDd["Viña"] + "\r\n";
 
-                        txtLote.Text += @"Colindancia norte :" + readerDd["cnorte"] + " " + @"Medida :" + readerDd["mnorte"] + "\r\n";
-                        txtLote.Text += @"Colindancia sur :" + readerDd["csur"] + " " + @"Medida :" + readerDd["msur"] + "\r\n";
-                        txtLote.Text += @"Colindancia oriente :" + readerDd["coriente"] + " " + @"Medida :" + readerDd["moriente"] + "\r\n";
-                        txtLote.Text += @"Colindancia poniente :" + readerDd["cponiente"] + " " + @"Medida :" + readerDd["mponiente"] + "\r\n";
+                        txtLote.Text += @"Colindancia norte :" + readerDd["cnorte"] + @" " + @"Medida :" + readerDd["mnorte"] + "\r\n";
+                        txtLote.Text += @"Colindancia sur :" + readerDd["csur"] + @" " + @"Medida :" + readerDd["msur"] + "\r\n";
+                        txtLote.Text += @"Colindancia oriente :" + readerDd["coriente"] + @" " + @"Medida :" + readerDd["moriente"] + "\r\n";
+                        txtLote.Text += @"Colindancia poniente :" + readerDd["cponiente"] + @" " + @"Medida :" + readerDd["mponiente"] + "\r\n";
                         //--
                         //txtLote.Text += @"Medida norte :" + readerDd["mnorte"] + "\r\n";
                         //txtLote.Text += @"Medida sur :" + readerDd["msur"] + "\r\n";
@@ -223,8 +223,7 @@ namespace viñedos.Monitoreo
                 table2.HorizontalAlignment = 0;
 
 
-                var cell2 = new PdfPCell(new Phrase(""));
-                cell2 = new PdfPCell(new Phrase("Colindancias ", FontFactory.GetFont("ARIAL", 12)));
+                var cell2 = new PdfPCell(new Phrase("Colindancias ", FontFactory.GetFont("ARIAL", 12)));
                 cell2.Border = 0;
                 table2.AddCell(cell2);
                 cell2 = new PdfPCell(new Phrase("", FontFactory.GetFont("ARIAL", 12)));
@@ -292,12 +291,14 @@ namespace viñedos.Monitoreo
 
                 document.Add(table2);
 
-
                 document.Close();
                 Process.Start(archivo);
 
             }
-            catch {}
+            catch
+            {
+                // ignored
+            }
         }
         private void monitoreo_FormClosing(object sender, FormClosingEventArgs e)
         {
